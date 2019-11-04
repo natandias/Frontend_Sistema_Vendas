@@ -1,20 +1,20 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+   <div id="app">
+     <h1 id="title"> SISTEMA DE VENDAS </h1>
+    <div id="nav">
+      <b-nav tabs fill>
+        <b-nav-item to="/Vendas" disabled>Vendas</b-nav-item>
+        <b-nav-item to="/Dividas" disabled>Dividas</b-nav-item>
+        <b-nav-item to="/Clientes">Clientes</b-nav-item>
+        <b-nav-item to="/Despesas" disabled>Despesas</b-nav-item>
+    </b-nav>
+
+    </div>
+    <router-view/>
+
+    </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
-}
-</script>
 
 <style>
 #app {
@@ -25,4 +25,20 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+#title {
+  color: #13cc85;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+#nav {
+  padding: 30px;
+}
+
+.router-link-active {
+    font-weight: bold;
+    color:#13cc85;
+}
+
+
 </style>
